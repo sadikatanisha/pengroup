@@ -15,14 +15,30 @@ export default function SubNav({ active }: SubNavProps) {
 
   return (
     <div className="flex justify-center mb-12 md:mb-20 w-full px-6">
-      {/* Desktop View: Bordered Inline List */}
-      <div className="hidden md:inline-flex flex-wrap justify-center items-center border border-ds-magenta px-8 py-3 gap-x-8 gap-y-4 text-sm  tracking-wider uppercase">
+      {/* Desktop/Tablet View */}
+      <div className="hidden md:inline-flex flex-wrap justify-center items-center border border-ds-magenta px-4 py-3 gap-x-6 gap-y-4 text-sm tracking-wider uppercase">
         {navItems.map((item) => (
           <button
             key={item.id}
             className={`transition-colors ${
               active === item.id
-                ? "text-white font-black "
+                ? "text-white uppercase font-bold"
+                : "text-gray-400 hover:text-white uppercase"
+            }`}
+          >
+            {item.label}
+          </button>
+        ))}
+      </div>
+
+      {/* Mobile View - Wrap Items */}
+      <div className="md:hidden flex flex-wrap justify-center items-center border border-ds-magenta px-4 py-3 gap-x-4 gap-y-2 w-full">
+        {navItems.map((item) => (
+          <button
+            key={item.id}
+            className={`text-ds-xs tracking-wider uppercase whitespace-nowrap transition-colors ${
+              active === item.id
+                ? "text-white font-bold"
                 : "text-gray-400 hover:text-white"
             }`}
           >

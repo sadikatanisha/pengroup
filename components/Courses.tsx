@@ -1,36 +1,18 @@
 import Image from "next/image";
 import { BiSolidQuoteLeft, BiSolidQuoteRight } from "react-icons/bi";
+import SubNav from "./SubNav";
 
 export default function Courses() {
   return (
-    <section className="bg-ds-navy py-24 px-6 md:px-2 max-w-7xl mx-auto w-full text-white">
-      {/* Top Navigation */}
-      <div className="flex justify-center mb-20">
-        <div className="inline-flex items-center border border-ds-magenta px-8 py-3 gap-8 text-xs md:text-sm font-bold tracking-wider uppercase">
-          <button className="text-white font-black">Courses</button>
-          <button className="text-gray-400 hover:text-white transition-colors">
-            Campuses
-          </button>
-          <button className="text-gray-400 hover:text-white transition-colors">
-            Partner Institutions
-          </button>
-          <button className="text-gray-400 hover:text-white transition-colors">
-            Student Testimonials
-          </button>
-          <button className="text-gray-400 hover:text-white transition-colors">
-            Stories
-          </button>
-        </div>
-      </div>
+    <section className="bg-ds-navy  px-6 md:px-2 max-w-7xl mx-auto w-full text-white">
+      <SubNav active="courses" />
 
-      {/* Main Content */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
-        {/* Left Image */}
-        <div className="relative aspect-square w-full max-w-md mx-auto lg:max-w-none lg:mx-0">
-          <div className="absolute inset-0 border border-white p-2">
+        <div className="relative h-[400px] md:h-[400px] w-full max-w-sm mx-auto lg:mx-0">
+          <div className="absolute inset-0 border border-white">
             <div className="relative w-full h-full overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1550614000-4b9519e0233e?w=800&q=80"
+                src="https://images.unsplash.com/photo-1570833181606-e694d0560b0c?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Fashion magazines stacked"
                 fill
                 className="object-cover"
@@ -41,13 +23,14 @@ export default function Courses() {
 
         {/* Right Content */}
         <div className="space-y-8">
-          <h2 className="text-5xl md:text-6xl font-black uppercase leading-tight">
+          <h2 className="text-4xl md:text-5xl font-black uppercase leading-tight relative inline-block">
             What will you
             <br />
             study?
+            <span className="absolute bottom-2 left-0 w-full h-4 bg-ds-blue-light/90 -z-10"></span>
           </h2>
 
-          <p className="text-lg text-gray-300 leading-relaxed max-w-xl">
+          <p className="text-lg text-white leading-relaxed max-w-xl">
             If you join Victoria College of Arts and Design, you can expect the
             highest calibre of teaching, cutting-edge facilities, and
             exceptional industry connections, which will help to prepare you for
@@ -117,7 +100,7 @@ export default function Courses() {
           </div>
 
           {/* Blue CTA Box Overlay */}
-          <div className="bg-[#122772] p-8 md:p-12 absolute -bottom-24 right-0 left-8 md:-left-12 shadow-xl z-10">
+          <div className="bg-[#05145A] p-8 md:p-12 absolute -bottom-24 right-0 left-8 md:-left-12 shadow-xl z-10">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
               <div>
                 <h4 className="text-2xl md:text-3xl font-bold leading-tight">
